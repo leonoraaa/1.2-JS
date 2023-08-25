@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="output"></div>
+
+    <script type="text/javascript">
+
+        let favfood, favdrink;
+        let age;
+        let name;
+
+        name = window.prompt("Please enter your first name");
+        favfood = window.prompt ("Please enter your favourite food");
+        favdrink = window.prompt ("Also enter your favourite drink!");
+        age = window.prompt ("Enter your age");
+
+        document.write ("<p> My favourite food is " + favfood + " too! </p>");
+        document.write ("<p> But my favourite drink is <strong>not</strong> " + favdrink + ", no offence!");
+        
+        let foodlength = favfood.length;
+        document.write ("<p> Your favourite food word has " + foodlength + " characters</p>");
+
+        let drinkupcase = favdrink.toUpperCase();
+        document.write ("<p> Using JavaScript, I can turn your favourite drink in uppercases: " + drinkupcase + "</p>");
+
+        let fooddrink = favfood.concat(favdrink);
+        document.write ("<p> These is your favourite food and favourite drink as one word: " + fooddrink + "</p>");
+
+
+
+
+        document.write ("<p> You are: " + age  + " years old</p>");
+
+        let squareRoot = Math.sqrt(age);
+        document.write ("<p>The square root of your age is " + squareRoot + "</p>");
+
+        let maxage = Math.max(age, 23);
+        document.write ("<p> Between your age and 23: " + maxage + " has the highest value</p>");
+
+        let y = 10;
+        let z = 20;
+
+        let sum = y + z;
+        document.write("<p> The sum of 10 and 20 is " + sum + "</p>");
+
+        let quotient = y / z;
+        document.write("<p> The quotient of 10 and 20 is " + quotient + "</p>");
+        
+
+
+
+        const colours = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+        
+        let length = colours.length;
+        document.write ("<p>The amount of colours in a rainbow (" + colours + ") is: " + length + " </p>");
+
+        let firstcolour = colours[0];
+        document.write ("<p>The first colour of the rainbow is: " + firstcolour + "</p>");
+
+        let lastcolour = colours[5];
+        document.write ("<p>The last colour of the rainbow is: " + lastcolour + "</p>");
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        let numlength = numbers.length;
+        document.write ("<p>The number of digits in this array (" + numbers + ") is: " + numlength + "</p>");
+
+        let timestwo = numbers.map(num => num * 2);
+        document.write ("<p>The numbers in the array when times by two is: " + timestwo + "</p>");
+
+
+
+
+        const d = new Date();
+        document.write ("<p>Today's date is: " + d + "</p>");
+
+        let second = d.getSeconds();
+        document.write ("<p>The second right now is: " + second + "</p>");
+        
+        let time = d.toTimeString();
+        document.write ("<p>The time right now is: " + time + "</p>");
+
+        let day = d.getDay();
+        document.write ("<p>The day today is: " + day + "</p>");
+
+        let nextyear = new Date();
+        nextyear.setFullYear(d.getFullYear() + 1);
+        document.write ("<p>The year next year will be: " + nextyear.getFullYear() + "</p>");
+
+
+
+        let w = newfunction(100, 100);
+        function newfunction(a, b) {
+            return a / b;
+        }
+        document.write ("</p> A number divided by itself will always be 1. So 100 / 100 is: " + w + "</p>");
+
+        function goodbye(name) {
+            return "It was nice meeting you " + name + " goodbye!";
+        }
+        let goodbye1 = goodbye(name);
+        document.write ("<p>" + goodbye1 + "</p>");
+
+    </script>
+</body>
+</html>
